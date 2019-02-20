@@ -1,0 +1,4 @@
+.npmignore
+bin/
+mern.starter.env.js
+NPM_Development.md

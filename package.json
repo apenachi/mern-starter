@@ -1,0 +1,23 @@
+{
+	"name": "mern-starter",
+	"version": "1.0.3",
+	"description": "",
+	"main": "mern-starter.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "./mern-starter.js"
+	},
+	"keywords":[
+		"mern",
+		"starter"
+	],
+	"author": "<apenachi@yahoo.com>",
+	"license": "ISC",
+	"preferGlobal": true,
+	"bin": {
+    "mern-starter": "./mern-starter.js"
+  },
+	"dependencies": {
+		"fs-extra": "~0.30.0"
+	}
+}

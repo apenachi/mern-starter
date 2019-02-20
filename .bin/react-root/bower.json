@@ -1,0 +1,20 @@
+{
+  "name": "app_name",
+  "description": "",
+  "main": "public/index.html",
+  "authors": [
+    "app_author"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

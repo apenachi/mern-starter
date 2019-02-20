@@ -1,0 +1,12 @@
+  a {
+    background-color: #FFF;
+    font-weight: bold;
+    padding: 10px;
+    display: inline-block;
+  }
+  a:hover {
+    background-color: #ABA; 
+  }
+  .active {
+     background-color: #BCF;
+  }
