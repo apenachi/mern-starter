@@ -1,4 +1,6 @@
 .npmignore
+.gitignore
 bin/
 mern.starter.env.js
 NPM_Development.md
+node_modules/

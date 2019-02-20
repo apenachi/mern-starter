@@ -8,28 +8,26 @@ var fse = require('fs-extra')
 var exec = require('child_process').exec;
 
 //console.log('process.argv ', process.argv);
-console.log('process.env.NODE_ENV: ', process.env.NODE_ENV);
-
-console.log('process.cwd: ', process.cwd())
-console.log('__dirname', __dirname )
-// return
+//console.log('process.env.NODE_ENV: ', process.env.NODE_ENV);
+//console.log('process.cwd: ', process.cwd())
+//console.log('__dirname', __dirname )
 
 process.argv.forEach(function(x, i){
-	console.log('process.argv %s:  - %s', i, x)
+	//console.log('process.argv %s:  - %s', i, x)
 })
 
-var input = process.argv[2];
+var input = process.argv[2] || '-'
 // var argument = process.argv[2].indexOf(':') > 0 ? true : false;
 var project = input;
-
-// Check for valid name
+// Check for valid project name
 var isValid = /^[\w\-\_\s]+$/gi.test(project);
-//process.argv[2].replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
 
-console.log('is valid ', isValid);
-console.log('project', project);
+if (!isValid) {
+	console.log('Invalid Project Name');
+	process.exit(-1);
+}
+
 var argument = input.split(':').length > 0 ? input.split(':')[0] : false;
-console.log('---> ', argument);
 
 if(process.argv.length <= 2 || !isValid) {
    console.log("Usage: mern-starter " +  "<my-mern-starter-app>");
@@ -39,6 +37,7 @@ if(process.argv.length <= 2 || !isValid) {
 // therefore fse.copySync('./bin/react-root', __dirname + '/'+ project)
 try {
 	fse.copySync(__dirname + '/.bin/react-root',  process.cwd() + '/'+ project)
+	console.log(`Project Name: ${argument}`);
 	console.log("success!")
 
 } catch (err) {
